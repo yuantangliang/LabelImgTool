@@ -1517,8 +1517,7 @@ class MainWindow(QMainWindow, WindowMixin):
             path_elem = dirpath.split('/')[:-2]
             last_path_elem = dirpath.split('/')[-1]
             s = '/'
-            self.defaultSaveDir = s.join(
-                path_elem) + '/Annotation' + '/' + last_path_elem + '/'
+            self.defaultSaveDir = dirpath
             if not os.path.exists(self.defaultSaveDir):
                 os.makedirs(self.defaultSaveDir)
                 # for windows
